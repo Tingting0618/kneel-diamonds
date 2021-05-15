@@ -5,6 +5,11 @@ const metals = getMetals()
 document.addEventListener(
     "change",
     (event) => {
+        if (event.target.name === "metal") {
+            //window.alert(event.target.value )
+            const price_metal = metals[event.target.value-1].price
+            window.alert(price_metal)
+            }
     }
 )
 
