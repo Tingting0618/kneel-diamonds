@@ -1,4 +1,4 @@
-import { getStyles } from "./database.js"
+import { getStyles,setStyle  } from "./database.js"
 
 
 const styles = getStyles()
@@ -8,8 +8,9 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "style") {
             //window.alert(event.target.value )
-            const price_style = styles[event.target.value-1].price
-            window.alert(price_style)
+           // const price_style = styles[event.target.value-1].price
+           // window.alert(price_style)
+            setStyle (parseInt(event.target.value))
             }
             
         }

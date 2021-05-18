@@ -1,4 +1,4 @@
-import { getSizes } from "./database.js"
+import { getSizes,setSize } from "./database.js"
 
 const sizes = getSizes()
 
@@ -7,9 +7,11 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "size") {
             //window.alert(event.target.value )
-            const price_size = sizes[event.target.value-1].price
-            window.alert(price_size)
+           // const price_size = sizes[event.target.value-1].price
+           // window.alert(price_size)
+            setSize(parseInt(event.target.value))
             }
+            
         }
 )
 
@@ -29,7 +31,4 @@ export const DiamondSizes = () => {
     return html
 }
 
-// for (const size of sizes) {
-//     if (size.id === event.target.value) {
-//         window.alert(`${size.carets} costs ${size.price}`)
-//     }
+
